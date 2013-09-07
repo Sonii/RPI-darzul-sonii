@@ -1,0 +1,40 @@
+# Enter/Play/Pause
+Wiimote.A               = KEY_ENTER
+
+# Back
+Wiimote.B               = KEY_BACKSPACE
+
+Wiimote.Up              = KEY_UP
+Wiimote.Down            = KEY_DOWN
+Wiimote.Left            = KEY_LEFT
+Wiimote.Right           = KEY_RIGHT
+
+# Sound Up/Down
+Wiimote.Minus           = KEY_M
+Wiimote.Plus            = KEY_P
+
+# Contextual menu
+Wiimote.Home            = KEY_ESC
+
+Wiimote.1               = KEY_V
+Wiimote.2               = BTN_RIGHT
+
+# Play/Pause
+Nunchuk.C              = KEY_C
+
+# Stop
+Nunchuk.Z              = KEY_X
+
+#plugin for nunchuk stick
+Plugin.nunchuk_kb.Up	= KEY_Z
+Plugin.nunchuk_kb.Down	= KEY_S
+Plugin.nunchuk_kb.Left	= KEY_Q
+Plugin.nunchuk_kb.Right	= KEY_D
+
+Plugin.led.Led1 = 1
+Plugin.led.Led2 = 0
+Plugin.led.Led3 = 0
+Plugin.led.Led4 = 0
+
+Plugin.ir_ptr.X = ~ABS_X
+Plugin.ir_ptr.Y = ~ABS_Y

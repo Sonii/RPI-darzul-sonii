@@ -1,0 +1,322 @@
+RetroArch files:
+-rwxr-xr-x 1 root staff 1.8M Aug 31 19:24 /usr/local/bin/retroarch
+/usr/local/bin/retroarch-zip does NOT exist.
+-rw-r--r-- 1 pi pi 17K Aug 31 21:32 /home/pi/RetroPie/configs/all/retroarch.cfg
+
+Active lines in /home/pi/RetroPie/configs/all/retroarch.cfg:
+system_directory = /home/pi/RetroPie/emulatorcores/
+video_smooth = false
+video_aspect_ratio = 1.33
+audio_out_rate = 48000
+audio_driver = alsathread
+input_player1_a = x
+input_player1_b = z
+input_player1_y = a
+input_player1_x = s
+input_player1_start = enter
+input_player1_select = rshift
+input_player1_l = q
+input_player1_r = w
+input_player1_left = left
+input_player1_right = right
+input_player1_up = up
+input_player1_down = down
+input_exit_emulator = escape
+input_rewind = r
+rewind_enable = true
+rewind_buffer_size = 10
+rewind_granularity = 2
+
+Emulation Station files:
+-rwxr-xr-x 1 pi pi 564K Aug 31 21:12 /home/pi/RetroPie/supplementary/EmulationStation/emulationstation
+-rw-r--r-- 1 pi pi 7.8K Aug 31 21:32 /home/pi/RetroPie/../.emulationstation/es_systems.cfg
+/home/pi/RetroPie/../.emulationstation/es_input.cfg does NOT exist.
+
+Content of es_systems.cfg:
+DESCNAME=Apple ][
+NAME=apple2
+PATH=/home/pi/RetroPie/roms/apple2
+EXTENSION=.txt
+COMMAND=/home/pi/RetroPie/emulators/linapple-src_2a/Start.sh
+
+DESCNAME=Atari 800
+NAME=atari800
+PATH=/home/pi/RetroPie/roms/atari800
+EXTENSION=.xex .XEX
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "/home/pi/RetroPie/emulators/atari800-3.0.0/installdir/bin/atari800 %ROM%"
+PLATFORMID=22
+
+DESCNAME=Atari 2600
+NAME=atari2600
+PATH=/home/pi/RetroPie/roms/atari2600
+EXTENSION=.a26 .A26 .bin .BIN .rom .ROM .zip .ZIP .gz .GZ
+#alternatively: COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "stella %ROM%"
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/atari2600/retroarch.cfg %ROM%"
+PLATFORMID=22
+
+DESCNAME=Basilisk II
+NAME=basiliskii
+PATH=/home/pi/RetroPie/roms/basiliskii
+EXTENSION=.txt
+COMMAND=sudo modprobe snd_pcm_oss && xinit /home/pi/RetroPie/emulators/basiliskii/installdir/bin/BasiliskII
+# Or possibly just COMMAND=xinit /home/pi/RetroPie/emulators/basiliskii/installdir/bin/BasiliskII
+
+DESCNAME=Cave Story
+NAME=cavestory
+PATH=/home/pi/RetroPie/roms/cavestory
+EXTENSION=.txt
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/cavestory/retroarch.cfg /home/pi/RetroPie/emulatorcores/nxengine-libretro/datafiles/Doukutsu.exe"
+
+DESCNAME=C64
+NAME=c64
+PATH=/home/pi/RetroPie/roms/c64
+EXTENSION=.crt .CRT .d64 .D64 .g64 .G64 .t64 .T64 .tap .TAP .x64 .X64 .zip .ZIP
+COMMAND=/home/pi/RetroPie/emulators/vice-2.3.dfsg/installdir/bin/x64 %ROM%
+PLATFORMID=40
+
+DESCNAME=Doom
+NAME=doom
+PATH=/home/pi/RetroPie/roms/doom
+EXTENSION=.WAD .wad
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/doom/retroarch.cfg %ROM%"
+PLATFORMID=1
+
+DESCNAME=Duke Nukem 3D
+NAME=duke3d
+PATH=/home/pi/RetroPie/roms/duke3d
+EXTENSION=.grp .GRP
+COMMAND=eduke32 -g %ROM% -gamegrp %ROM%
+PLATFORMID=1
+
+DESCNAME=Game Boy
+NAME=gb
+PATH=/home/pi/RetroPie/roms/gb
+EXTENSION=.gb .GB
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L /home/pi/RetroPie/emulatorcores/gambatte-libretro/libgambatte/gambatte_libretro.so --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/gb/retroarch.cfg %ROM%"
+PLATFORMID=4
+
+DESCNAME=Game Boy Advance
+NAME=gba
+PATH=/home/pi/RetroPie/roms/gba
+EXTENSION=.gba .GBA
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "/home/pi/RetroPie/emulators/gpsp/raspberrypi/gpsp %ROM%"
+PLATFORMID=5
+
+DESCNAME=Game Boy Color
+NAME=gbc
+PATH=/home/pi/RetroPie/roms/gbc
+EXTENSION=.gbc .GBC
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L /home/pi/RetroPie/emulatorcores/gambatte-libretro/libgambatte/gambatte_libretro.so --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/gbc/retroarch.cfg %ROM%"
+PLATFORMID=41
+
+DESCNAME=Sega Game Gear
+NAME=gamegear
+PATH=/home/pi/RetroPie/roms/gamegear
+EXTENSION=.gg .GG
+COMMAND=/home/pi/RetroPie/emulators/osmose-0.8.1+rpi20121122/osmose %ROM% -joy -tv -fs
+PLATFORMID=20
+
+DESCNAME=Intellivision
+NAME=intellivision
+PATH=/home/pi/RetroPie/roms/intellivision
+EXTENSION=.int .INT .bin .BIN
+COMMAND=/home/pi/RetroPie/emulators/jzintv-1.0-beta4/bin/jzintv -z1 -f1 -q %ROM%
+PLATFORMID=32
+
+DESCNAME=MAME
+NAME=mame
+PATH=/home/pi/RetroPie/roms/mame
+EXTENSION=.zip .ZIP
+COMMAND=retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/mame/retroarch.cfg %ROM% 
+# alternatively: COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "/home/pi/RetroPie/emulators/pifba/fba2x %ROM%" 
+PLATFORMID=23
+
+DESCNAME=FinalBurn Alpha
+NAME=fba
+PATH=/home/pi/RetroPie/roms/fba
+EXTENSION=.zip .ZIP
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/fba/retroarch.cfg %ROM%"
+# alternatively: COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "/home/pi/RetroPie/emulators/pifba/fba2x %ROM%" 
+PLATFORMID=23
+
+DESCNAME=PC (x86)
+NAME=x86
+PATH=/home/pi/RetroPie/roms/x86
+EXTENSION=.txt
+COMMAND=/home/pi/RetroPie/emulators/rpix86/Start.sh
+PLATFORMID=1
+
+DESCNAME=ScummVM
+NAME=scummvm
+PATH=/home/pi/RetroPie/roms/scummvm
+EXTENSION=.exe .EXE
+COMMAND=scummvm
+PLATFORMID=20
+
+DESCNAME=Sega Master System II
+NAME=mastersystem
+PATH=/home/pi/RetroPie/roms/mastersystem
+EXTENSION=.sms .SMS
+COMMAND=/home/pi/RetroPie/emulators/osmose-0.8.1+rpi20121122/osmose %ROM% -joy -tv -fs
+PLATFORMID=35
+
+DESCNAME=Sega Mega Drive / Genesis
+NAME=megadrive
+PATH=/home/pi/RetroPie/roms/megadrive
+EXTENSION=.smd .SMD .bin .BIN
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/megadrive/retroarch.cfg %ROM%"
+# alternatively: COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "/home/pi/RetroPie/emulators/dgen-sdl/dgen -f -r /home/pi/RetroPie/configs/all/dgenrc %ROM%"
+# alternatively: COMMAND=export LD_LIBRARY_PATH="/home/pi/RetroPie/supplementary/dispmanx/SDL12-kms-dispmanx/build/.libs"; /home/pi/RetroPie/emulators/dgen-sdl/dgen %ROM%
+PLATFORMID=18
+
+DESCNAME=NeoGeo
+NAME=neogeo
+PATH=/home/pi/RetroPie/roms/neogeo
+EXTENSION=.zip .ZIP
+COMMAND=/home/pi/RetroPie/emulators/gngeo-pi-0.85/installdir/bin/arm-linux-gngeo -i /home/pi/RetroPie/roms/neogeo -B /home/pi/RetroPie/emulators/gngeo-pi-0.85/neogeobios %ROM%
+# alternatively: COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "/home/pi/RetroPie/emulators/pifba/fba2x %ROM%" 
+PLATFORMID=24
+
+DESCNAME=Nintendo Entertainment System
+NAME=nes
+PATH=/home/pi/RetroPie/roms/nes
+EXTENSION=.nes .NES
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/nes/retroarch.cfg %ROM%"
+PLATFORMID=7
+
+DESCNAME=PC Engine/TurboGrafx 16
+NAME=pcengine
+PATH=/home/pi/RetroPie/roms/pcengine
+EXTENSION=.pce
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/pcengine/retroarch.cfg %ROM%"
+PLATFORMID=34
+
+DESCNAME=Sony Playstation 1
+NAME=psx
+PATH=/home/pi/RetroPie/roms/psx
+EXTENSION=.img .IMG .7z .7Z .pbp .PBP .bin .BIN
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L  --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/psx/retroarch.cfg %ROM%"
+PLATFORMID=10
+
+DESCNAME=Playstation Portable
+NAME=psp
+PATH=/home/pi/RetroPie/roms/psp
+EXTENSION=.iso .ISO .cso .CSO
+COMMAND=/home/pi/RetroPie/emulators/ppsspp/PPSSPPSDL %ROM% en
+PLATFORMID=13
+
+DESCNAME=Super Nintendo
+NAME=snes
+PATH=/home/pi/RetroPie/roms/snes
+EXTENSION=.smc .sfc .fig .swc .SMC .SFC .FIG .SWC
+COMMAND=/home/pi/RetroPie/supplementary/runcommand/runcommand.sh 1 "retroarch -L /home/pi/RetroPie/emulatorcores/pocketsnes-libretro/libretro.so --config /home/pi/RetroPie/configs/all/retroarch.cfg --appendconfig /home/pi/RetroPie/configs/snes/retroarch.cfg %ROM%"
+# alternatively: COMMAND=/home/pi/RetroPie/emulators/snes9x-rpi/snes9x %ROM%
+# alternatively: COMMAND=/home/pi/RetroPie/emulators/pisnes/snes9x %ROM%
+PLATFORMID=6
+
+DESCNAME=ZX Spectrum
+NAME=zxspectrum
+PATH=/home/pi/RetroPie/roms/zxspectrum
+EXTENSION=.z80 .Z80
+COMMAND=xinit fuse
+# alternatively: COMMAND=/home/pi/RetroPie/emulators/fbzx-2.10.0/fbzx %ROM%
+
+DESCNAME=Input Configuration
+NAME=esconfig
+PATH=/home/pi/RetroPie/roms/esconfig
+EXTENSION=.sh .SH
+COMMAND=/home/pi/RetroPie/roms/esconfig/Start.sh
+
+Content of es_input.cfg:
+
+Emulators and cores:
+ does NOT exist.
+ does NOT exist.
+/home/pi/RetroPie/emulatorcores/libretro-prboom/prboom.wad does NOT exist.
+ does NOT exist.
+ does NOT exist.
+-rwxr-xr-x 1 pi pi 312K Aug 31 20:20 /home/pi/RetroPie/emulatorcores/gambatte-libretro/libgambatte/gambatte_libretro.so
+ does NOT exist.
+ does NOT exist.
+ does NOT exist.
+ does NOT exist.
+-rwxr-xr-x 1 pi pi 970K Aug 31 20:33 /home/pi/RetroPie/emulatorcores/pocketsnes-libretro/libretro.so
+ does NOT exist.
+/home/pi/RetroPie/emulators/uae4rpi/uae4all does NOT exist.
+
+SNESDev:
+/home/pi/RetroPie/supplementary/SNESDev-Rpi/bin/SNESDev does NOT exist.
+
+Summary of ROMS directory:
+4.0K	/home/pi/RetroPie/roms/cavestory
+4.0K	/home/pi/RetroPie/roms/gbc
+4.0K	/home/pi/RetroPie/roms/gamegear
+4.0K	/home/pi/RetroPie/roms/mame
+4.0K	/home/pi/RetroPie/roms/c64
+4.0K	/home/pi/RetroPie/roms/amiga
+4.0K	/home/pi/RetroPie/roms/gba
+4.0K	/home/pi/RetroPie/roms/atari800
+4.0K	/home/pi/RetroPie/roms/mastersystem
+4.0K	/home/pi/RetroPie/roms/nes
+4.0K	/home/pi/RetroPie/roms/zmachine
+4.0K	/home/pi/RetroPie/roms/esconfig
+4.0K	/home/pi/RetroPie/roms/doom
+4.0K	/home/pi/RetroPie/roms/psp
+4.0K	/home/pi/RetroPie/roms/fba
+4.0K	/home/pi/RetroPie/roms/scummvm
+4.0K	/home/pi/RetroPie/roms/zxspectrum
+4.0K	/home/pi/RetroPie/roms/megadrive
+4.0K	/home/pi/RetroPie/roms/intellivision
+4.0K	/home/pi/RetroPie/roms/neogeo
+4.0K	/home/pi/RetroPie/roms/x86
+4.0K	/home/pi/RetroPie/roms/basiliskii
+4.0K	/home/pi/RetroPie/roms/psx
+4.0K	/home/pi/RetroPie/roms/snes
+4.0K	/home/pi/RetroPie/roms/atari2600
+4.0K	/home/pi/RetroPie/roms/duke3d
+4.0K	/home/pi/RetroPie/roms/pcengine
+4.0K	/home/pi/RetroPie/roms/gb
+116K	/home/pi/RetroPie/roms/
+116K	total
+
+Unrecognized ROM extensions:
+
+Check for needed APT packages:
+Checking for somelib: install ok installed
+installed: libsdl1.2-dev
+Checking for somelib: install ok installed
+installed: screen
+Checking for somelib: install ok installed
+installed: scons
+Checking for somelib: install ok installed
+installed: libasound2-dev
+Checking for somelib: install ok installed
+installed: pkg-config
+Checking for somelib: install ok installed
+installed: libgtk2.0-dev
+Checking for somelib: install ok installed
+installed: libboost-filesystem-dev
+Checking for somelib: install ok installed
+installed: libboost-system-dev
+Checking for somelib: install ok installed
+installed: zip
+Checking for somelib: install ok installed
+installed: libxml2
+Checking for somelib: install ok installed
+installed: libxml2-dev
+Checking for somelib: install ok installed
+installed: libbz2-dev
+Checking for somelib: install ok installed
+installed: python-imaging
+Checking for somelib: install ok installed
+installed: libfreeimage-dev
+Checking for somelib: install ok installed
+installed: libfreetype6-dev
+Checking for somelib: install ok installed
+installed: libaudiofile-dev
+Checking for somelib: install ok installed
+installed: libsdl-sound1.2-dev
+Checking for somelib: install ok installed
+installed: libsdl-mixer1.2-dev
+
+End of log file

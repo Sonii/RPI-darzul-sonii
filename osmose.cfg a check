@@ -1,0 +1,27 @@
+#
+#  General emulation keys:
+#
+
+SCREENSHOT	= SDLK_F4
+SOUNDSHOT 	= SDLK_F2
+QUIT      	= SDLK_ESCAPE
+TILESHOT  	= SDLK_g
+DEBUGGER  	= SDLK_h
+PAUSE     	= SDLK_p
+
+#
+# First Player PAD:
+#
+
+PAD1_UP   	= SDLK_z
+PAD1_DOWN 	= SDLK_s
+PAD1_LEFT 	= SDLK_q
+PAD1_RIGHT	= SDLK_d
+PAD1_BUTTON_A = SDLK_RETURN
+PAD1_BUTTON_B = SDLK_BACKSPACE
+
+#
+# GAME GEAR Specific:
+#
+
+GAMEGEAR_START = SDLK_m
