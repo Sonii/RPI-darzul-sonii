@@ -54,18 +54,18 @@
       <backspace>Back</backspace>
       <key id='65446'>Back</key>
       <minus>ActivateWindow(PlayerControls)</minus>
-      <v>ActivateWindow(shutdownmenu)</v>
+      <space>ActivateWindow(shutdownmenu)</space>
       <escape>PreviousMenu</escape>
       <i>Info</i>
       <menu>ContextMenu</menu>
-      <space>ContextMenu</space>
+      <v>ContextMenu</v>
       <c>Pause</c>
       <x>Stop</x>
       <period>SkipNext</period>
       <comma>SkipPrevious</comma>
       <tab>FullScreen</tab>
       <printscreen>Screenshot</printscreen>
-      <v mod="ctrl">Screenshot</v>
+      <space mod="ctrl">Screenshot</space>
       <m>VolumeDown</m>
       <p>VolumeUp</p>
       <equals>VolumeUp</equals>
@@ -127,7 +127,7 @@
       <!-- MS Media Center keyboard shortcuts sent by MCE remotes -->
       <!-- See http://msdn.microsoft.com/en-us/library/bb189249.aspx -->
       <plus mod="ctrl,shift">Play</plus>        <!-- Play -->
-      <v mod="ctrl,shift">Stop</v>        <!-- Stop -->
+      <space mod="ctrl,shift">Stop</space>        <!-- Stop -->
       <plus mod="ctrl">Pause</plus>             <!-- Pause -->
       <f mod="ctrl,shift">FastForward</f> <!-- Fwd -->
       <b mod="ctrl,shift">Rewind</b>      <!-- Rew -->
@@ -235,7 +235,7 @@
       <down>BigStepBack</down>
       <a>AudioDelay</a>
       <escape>Fullscreen</escape>
-      <space>Playlist</space>
+      <v>Playlist</v>
       <s>XBMC.ActivateWindow(Teletext)</s>
       <up mod="ctrl">SubtitleShiftUp</up>
       <down mod="ctrl">SubtitleShiftDown</down>
@@ -287,7 +287,7 @@
       <l>LockPreset</l>
       <escape>FullScreen</escape>
       <g>XBMC.ActivateWindow(PVROSDGuide)</g>
-      <space>XBMC.ActivateWindow(PVROSDChannels)</space>
+      <v>XBMC.ActivateWindow(PVROSDChannels)</v>
     </keyboard>
   </Visualisation>
   <MusicOSD>
@@ -442,7 +442,7 @@
   </MyPictures>
   <ContextMenu>
     <keyboard>
-      <space>Back</space>
+      <v>Back</v>
       <menu>Back</menu>
     </keyboard>
   </ContextMenu>
@@ -499,7 +499,7 @@
     <keyboard>
       <backspace>Close</backspace>
       <escape>Close</escape>
-      <space>Close</space>
+      <v>Close</v>
     </keyboard>
   </PVROSDChannels>
   <PVROSDGuide>
@@ -532,7 +532,7 @@
   </FileBrowser>
   <ShutdownMenu>
     <keyboard>
-      <v>Back</v>
+      <space>Back</space>
     </keyboard>
   </ShutdownMenu>
   <AddonInformation>

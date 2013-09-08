@@ -30,6 +30,9 @@ RUN_AS=root
 # Path of the PID file
 PID_FILE=/var/run/xbmc.pid
 
+# Priority of processus
+NICE=-5
+
 ############### END EDIT ME ##################
 
 test -x $DAEMON || exit 0
@@ -41,8 +44,11 @@ case "$1" in
         echo "Starting $DESC"
         if [ -z $(pgrep wminput) ]; then
                 sudo wminput -d&
+       else
+	    NICE=0
         fi
-        start-stop-daemon --start -c $RUN_AS --background --pidfile $PID_FILE  --make-pidfile --exec $DAEMON  -- $DAEMON_OPTS
+
+        start-stop-daemon --start -c $RUN_AS --background --pidfile $PID_FILE -N $NICE --make-pidfile --exec $DAEMON  -- $DAEMON_OPTS
         ;;
   stop)
         echo "Stopping $DESC"
@@ -63,3 +69,4 @@ case "$1" in
 esac
 
 exit 0
+
